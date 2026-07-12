@@ -19,7 +19,6 @@ Each class is documented in its own markdown file:
 ```
 
 As the course progresses, I'll also add:
-
 - Code and scripts from hands-on exercises
 - Agent workflows/automations built during the course
 - Any relevant diagrams or references
@@ -33,5 +32,4 @@ As the course progresses, I'll also add:
 I'm Wajid Ali, an aspiring AI Automation Consultant based in Sialkot, Pakistan, learning AI automation, agent-building, and no-code tools independently.
 
 ---
-
-_This repo is a work in progress and will be updated as I complete each class._
+*This repo is a work in progress and will be updated as I complete each class.*
