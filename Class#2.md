@@ -112,7 +112,7 @@ with no extra text, using this structure:
 **Why JSON is useful:**
 
 - It's the standard format most APIs and programming languages parse natively
-- Easy to congit push origin mainvert directly into objects/variables in code (e.g., JavaScript, Python)
+- Easy to convert directly into objects/variables in code (e.g., JavaScript, Python)
 - Compact and widely supported across tools, databases, and agent frameworks
 
 ### XML vs JSON — When to Use Which
@@ -148,4 +148,4 @@ This lecture set the foundation for designing smarter, more intentional interact
 
 ---
 
-_Part of the "AI Agents" course repository — Master AI Agents by Tech7Academy._
+*Part of the "AI Agents" course repository — Master AI Agents by Tech7Academy.*s
