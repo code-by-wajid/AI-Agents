@@ -1,9 +1,11 @@
 # Class 2 - LLMs' Prompts & Smart Agents
 
 ## Overview
+
 This class covered Large Language Models (LLMs) and how they can be guided through **prompt engineering** — the skill of crafting inputs to get accurate, useful, or creative outputs from AI systems.
 
 ## What is Prompt Engineering?
+
 Prompt engineering is the practice of designing and structuring prompts (instructions/cues given to an AI) in a way that significantly impacts the quality and accuracy of the AI's responses. It's a key skill for effectively interacting with LLMs.
 
 ## Types of Prompts
@@ -21,7 +23,7 @@ Prompt engineering is the practice of designing and structuring prompts (instruc
    - Influences the tone, vocabulary, and depth of the AI's output.
 
 4. **Negative prompts**
-   - Telling the AI what *not* to do.
+   - Telling the AI what _not_ to do.
    - Helps narrow down or refine the output by excluding unwanted behavior or content.
 
 5. **Structured prompts (XML/JSON)**
@@ -36,11 +38,13 @@ Structured prompts matter most when the AI's output needs to be **read by anothe
 ### XML-style Prompting
 
 **Syntax basics:**
+
 - Content is wrapped in opening and closing tags: `<tag>content</tag>`
 - Tags can be nested to represent structure/hierarchy
 - Tag names are custom — you define whatever makes sense for your task
 
 **Example — asking an LLM to structure a prompt using XML tags:**
+
 ```xml
 <instructions>
 Summarize the following article in 3 bullet points.
@@ -56,6 +60,7 @@ Return the summary as plain bullet points, no extra commentary.
 ```
 
 **Example — asking the model to respond in XML:**
+
 ```xml
 <response>
   <summary>Short summary of the article</summary>
@@ -68,6 +73,7 @@ Return the summary as plain bullet points, no extra commentary.
 ```
 
 **Why XML is useful:**
+
 - Clear visual separation between sections (instructions vs. data vs. examples)
 - Nesting makes hierarchy explicit (e.g., multiple `<point>` tags inside `<key_points>`)
 - Many LLMs (including Claude) are specifically trained to follow XML-tagged instructions well
@@ -75,26 +81,25 @@ Return the summary as plain bullet points, no extra commentary.
 ### JSON-style Prompting
 
 **Syntax basics:**
+
 - Data is structured as key-value pairs: `"key": "value"`
 - Curly braces `{}` define an object; square brackets `[]` define a list/array
 - Keys are always strings in double quotes; values can be strings, numbers, booleans, objects, or arrays
 
 **Example — asking the model to return JSON:**
+
 ```json
 {
   "summary": "Short summary of the article",
-  "key_points": [
-    "First key point",
-    "Second key point",
-    "Third key point"
-  ],
+  "key_points": ["First key point", "Second key point", "Third key point"],
   "word_count": 245
 }
 ```
 
 **Example — a prompt instructing structured JSON output:**
+
 ```
-Analyze the sentiment of this review and respond ONLY in JSON format, 
+Analyze the sentiment of this review and respond ONLY in JSON format,
 with no extra text, using this structure:
 
 {
@@ -105,24 +110,26 @@ with no extra text, using this structure:
 ```
 
 **Why JSON is useful:**
+
 - It's the standard format most APIs and programming languages parse natively
 - Easy to convert directly into objects/variables in code (e.g., JavaScript, Python)
 - Compact and widely supported across tools, databases, and agent frameworks
 
 ### XML vs JSON — When to Use Which
 
-| | XML | JSON |
-|---|---|---|
-| Best for | Long-form or nested instructions, separating prompt sections | Data meant to be directly consumed by code/APIs |
-| Readability | Easier for humans to scan visually | More compact, less visual noise |
-| Common use case | Structuring a *prompt* (instructions, context, examples) | Structuring a *response* (data to be parsed programmatically) |
-| LLM handling | Many models (like Claude) are trained to respect XML tags precisely | Very reliable for models trained on code/data-heavy tasks |
+|                 | XML                                                                 | JSON                                                          |
+| --------------- | ------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Best for        | Long-form or nested instructions, separating prompt sections        | Data meant to be directly consumed by code/APIs               |
+| Readability     | Easier for humans to scan visually                                  | More compact, less visual noise                               |
+| Common use case | Structuring a _prompt_ (instructions, context, examples)            | Structuring a _response_ (data to be parsed programmatically) |
+| LLM handling    | Many models (like Claude) are trained to respect XML tags precisely | Very reliable for models trained on code/data-heavy tasks     |
 
 **Key rule of thumb from the lecture:** use structured prompting whenever the output needs to be handed off to another system (an API call, a database, another agent) rather than just read by a person — structure removes ambiguity and prevents the AI from "wandering" in its response.
 
 ## Smart Agents
 
 **Smart agents** are autonomous or semi-autonomous systems powered by LLMs that can:
+
 - Understand instructions
 - Make decisions
 - Take actions across digital environments (e.g., calling APIs, using tools, navigating apps)
@@ -132,6 +139,7 @@ Smart agents rely heavily on **well-designed prompts** to function accurately an
 ## Key Takeaway
 
 Structured thinking and clarity are essential when working with language models. The way a prompt is designed shapes:
+
 - How accurate the response is
 - How well an agent understands its task
 - How reliably an agent can take the right action
@@ -139,4 +147,5 @@ Structured thinking and clarity are essential when working with language models.
 This lecture set the foundation for designing smarter, more intentional interactions with AI tools and agents going forward.
 
 ---
-*Part of the "AI Agents" course repository — Master AI Agents by Tech7Academy.*
+
+_Part of the "AI Agents" course repository — Master AI Agents by Tech7Academy._
